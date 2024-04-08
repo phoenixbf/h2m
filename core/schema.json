@@ -5,11 +5,13 @@
       "RI": {
         "type": "string",
         "title": "Research Infrastructure",
+        "required": true,
         "enum": ["E-RIHS","CLARIN","DARIAH","OPERAS"]
       },
       "name": {
         "title": "Service name",
-        "type": "string"
+        "type": "string",
+        "required": true
       },
       "description": {
         "title": "Description",
@@ -29,9 +31,8 @@
         "type": "string"
       },
       "domain": {
+        "title": "Domain",
         "type": "string"
       }
-    },
-
-    "required": ["ri","name","category"]
+    }
   }

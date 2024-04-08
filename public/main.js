@@ -14,9 +14,14 @@ let generateForm = ()=>{
         schema: jschema.properties,
 /*
         form: [
+            "*",
+            {
+                "key": "description",
+                "type": "textarea"
+            },
             {
                 "type": "submit",
-                "title": "Generate"
+                "title": "Generate Manifest"
             }
         ],
 */
