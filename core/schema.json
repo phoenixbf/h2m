@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "RI": {
+        "type": "string",
+        "title": "Research Infrastructure",
+        "enum": ["E-RIHS","CLARIN","DARIAH","OPERAS"]
+      },
+      "name": {
+        "title": "Service name",
+        "type": "string"
+      },
+      "description": {
+        "title": "Description",
+        "description": "A sample description of the service",
+        "type": "string"
+      },
+      "keywords": {
+        "title": "Keywords",
+        "type": "array",
+        "items": {
+            "type":"string",
+            "enum": ["kw1","kw2"]
+        }
+      },
+      "category": {
+        "title": "Category",
+        "type": "string"
+      },
+      "domain": {
+        "type": "string"
+      }
+    },
+
+    "required": ["ri","name","category"]
+  }
