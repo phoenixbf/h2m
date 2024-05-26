@@ -14,9 +14,12 @@ let generateForm = ()=>{
         schema: jschema.properties,
 /*
         form: [
-            "*",
             {
-                "key": "description",
+                "key": "general.title",
+                "type": "text"
+            },
+            {
+                "key": "general.summary",
                 "type": "textarea"
             },
             {

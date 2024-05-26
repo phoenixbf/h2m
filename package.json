@@ -9,7 +9,7 @@
   "author": "Bruno Fanini CNR ISPC",
   "license": "GPL-3.0-only",
   "dependencies": {
-    "@hyperjump/json-schema": "^1.8.0",
+    "@hyperjump/json-schema": "^1.9.2",
     "express": "^4.19.2",
     "jsonform": "^2.2.5",
     "path": "^0.12.7"

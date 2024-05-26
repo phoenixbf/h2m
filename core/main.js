@@ -26,5 +26,5 @@ app.get("/api/schema", (req,res)=>{
 
 
 http.createServer(app).listen(PORT, ()=>{
-	console.log("Service up and running");
+	console.log("Service up and running on PORT "+PORT);
 });
