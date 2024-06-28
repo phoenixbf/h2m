@@ -12,8 +12,10 @@ let submit = (errors, values)=>{
 let generateForm = ()=>{
     $('#idForm').jsonForm({
         schema: jschema.properties,
-/*
+
         form: [
+            "*",
+/*
             {
                 "key": "general.title",
                 "type": "text"
@@ -22,12 +24,13 @@ let generateForm = ()=>{
                 "key": "general.summary",
                 "type": "textarea"
             },
+*/
             {
                 "type": "submit",
                 "title": "Generate Manifest"
             }
         ],
-*/
+
         onSubmit: submit
       });
 };

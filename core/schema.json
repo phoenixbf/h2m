@@ -32,7 +32,22 @@
           },
           "category": {
             "title": "Category",
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type":"string",
+                "enum": [
+                  "Data Analysis",
+                  "Data Representation and Visualization",
+                  "Data Processing",
+                  "Digital Fabrication",
+                  "Query and Data Extraction",
+                  "Analytics and Descriptive Statistics",
+                  "Remote Monitoring",
+                  "Data Curation and Preservation",
+                  "Documentation",
+                  "Electronic Devices Prototyping and Development"
+                ]
+            }
           },
           "domain": {
             "title": "Research domain",
