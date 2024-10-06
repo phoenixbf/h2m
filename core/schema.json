@@ -75,11 +75,85 @@
             "title": "Contact Team",
             "type": "array",
             "items": {
-                "type":"string"
+                "type":"string",
+                "title":"mail"
             }
           }
         }
-      }
+      },
 
+      "flows":{
+        "type":"object",
+        "title": "I/O Flows",
+        "properties": {
+          "list":{
+            "type":"array",
+            "items": {
+              "type":"object",
+              "title":"Flow",
+              "properties": {
+                "input-type": {
+                  "type": "string",
+                  "title":"Input file type",
+                  "enum": ["Image","Text","Video","Audio","3D Model"]
+                },
+                "input-format": {
+                  "type": "string"
+                },
+                "output-type": {
+                  "type": "string",
+                  "title":"output file type",
+                  "enum": ["Image","Text","Video","Audio","3D Model"]
+                },
+                "output-format": {
+                  "type": "string"
+                },
+    
+                "description": {
+                  "title": "Description",
+                  "type": "string",
+                  "description": "A brief description for this I/O flow"
+                }
+              }
+            }
+          }
+        }
+      },
+
+      "access":{
+        "type":"object",
+        "title": "Access",
+        "properties": {
+          "instances": {
+            "title": "Instances",
+            "description": "list of 1 or more urls representing main access points. When more than 1 elements are present, first entry is considered the main access point",
+            "type": "array",
+            "items": {
+              "type":"string",
+              "title": "access point"
+            }
+          },
+          "oas":{
+            "title": "OpenAPI specification",
+            "description": "URL to OpenAPI definition (JSON/YAML) describing REST API for this service. OAS URL must be publicly accessible",
+            "type": "string"
+          },
+          "horizontal":{
+            "title": "Horizontal service",
+            "description": "The service is potentially useful for all researchers, no matter their affiliation nor scientific discipline. Usually provided by computing centers and e-Infrastructures, offering additional value to service providers and developers, who want to enhance their services with new capabilities like computing or storage",
+            "type": "boolean"
+          },
+          "gui":{
+            "title": "Graphical User Interface",
+            "description": "The service provides a GUI to control I/O processes (conversion parameters, etc.)",
+            "type": "boolean"
+          },
+          "presentation":{
+            "title": "Presentation layer",
+            "description": "The service offers a presentation layer to inspect data (e.g.: images, 3D models, etc.)",
+            "type": "boolean"
+          }
+        }
+      }
     }
   }

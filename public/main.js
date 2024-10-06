@@ -14,20 +14,93 @@ let generateForm = ()=>{
         schema: jschema.properties,
 
         form: [
-            "*",
-/*
+            //"*",
+
+            // GENERAL
             {
-                "key": "general.title",
-                "type": "text"
+                type: "fieldset",
+                title: "General",
+                expandable: false,
+                items: [
+                    {
+                        key: "general.title",
+                        type: "text"
+                    },
+                    {
+                        key: "general.summary",
+                        type: "textarea"
+                    },
+
+                    {
+                        key: "general.category",
+                        type: "checkboxes"
+                    },
+                ]
             },
+
+            // PROVIDER
             {
-                "key": "general.summary",
-                "type": "textarea"
+                type: "fieldset",
+                title: "Provider",
+                expandable: false,
+                items: [
+                    {
+                        key: "provider.RI",
+                        type: "radiobuttons"
+                    },
+                    {
+                        key: "provider.contact",
+                        type: "array"
+                    },
+                ]
             },
-*/
+
+            // FLOWS
             {
-                "type": "submit",
-                "title": "Generate Manifest"
+                type: "fieldset",
+                title: "Flows",
+                expandable: false,
+                items: [
+                    {
+                        key: "flows.list",
+                        type: "array"
+                    },
+                ]
+            },
+
+            // ACCESS
+            {
+                type: "fieldset",
+                title: "Access",
+                expandable: false,
+                items: [
+                    {
+                        key: "access.instances",
+                        type: "array"
+                    },
+                    {
+                        key: "access.oas",
+                        type: "text"
+                    },
+                    {
+                        key: "access.horizontal",
+                        type: "checkbox"
+                    },
+                    {
+                        key: "access.gui",
+                        type: "checkbox"
+                    },
+                    {
+                        key: "access.presentation",
+                        type: "checkbox"
+                    },
+                ]
+            }, 
+
+            //===============================
+            {
+                type: "submit",
+                title: "Generate Manifest"
             }
         ],
 
