@@ -1,3 +1,8 @@
+.header {
+    display: inline-block;
+    font-size: x-large;
+}
+
 .well {
     background-color: rgba(1,1,1, 0);
     border: none !important;
@@ -13,10 +18,63 @@ fieldset {
     padding: 10px;
 }
 
+
 legend {
+    width: 100%;
     background-color: #004371;
     border-radius: 10px;
     color: white;
     font-weight: bold;
     padding: 10px;
+    margin: 0px;
+
+    cursor: pointer;
 }
+
+legend:hover {
+    background-color: black;
+/*
+    outline-width: 5px;
+    outline-color: black;
+    outline-style: solid;
+*/
+}
+
+/*
+legend:before {
+    content: url('./icon-services.png');
+    display: inline-block;
+
+    padding-right: 3px;
+    vertical-align: middle;
+}
+
+legend img {
+    width: 32px !important;
+    height: auto;
+}
+*/
+
+._jsonform-array-deletelast {
+    background-color: rgba(255,0,0, 0.2);
+}
+._jsonform-array-deletelast:hover {
+    background-color: rgba(255,0,0, 0.5);
+}
+
+.btn-primary {
+    width: 100%;
+    font-size: larger;
+}
+
+/*
+.checkbox {
+    height: 25px;
+    padding: 15px;
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+  }
+*/

@@ -55,7 +55,7 @@
           },
           "website": {
             "title": "Website",
-            "description": "Main reference website (if present). This is NOT the access point of the service",
+            "description": "Main reference website (if present) for this service. This is NOT the access point of the service",
             "type": "string"
           }
         }
