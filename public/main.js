@@ -133,6 +133,10 @@ let formAccess = {
     ]
 };
 
+let formTech = {
+    
+};
+
 let generateForm = ()=>{
     $('#idForm').jsonForm({
         schema: jschema.properties,
