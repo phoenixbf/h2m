@@ -58,6 +58,11 @@ let formGeneral = {
         },
 
         {
+            key: "general.domain",
+            type: "text"
+        },
+
+        {
             key: "general.website",
             type: "text"
         },
@@ -134,12 +139,54 @@ let formAccess = {
 };
 
 let formTech = {
-    
+    type: "fieldset",
+    title: "Technology",
+    expandable: true,
+    items: [
+        {
+            key: "technology.trl",
+            type: "range",
+            step: 1,
+            indicator: true
+        },
+        {
+            key: "technology.srl",
+            type: "range",
+            step: 1,
+            indicator: true
+        },
+        {
+            key: "technology.orl",
+            type: "range",
+            step: 1,
+            indicator: true
+        },
+        {
+            key: "technology.lrl",
+            type: "range",
+            step: 1,
+            indicator: true
+        },
+
+        {
+            key: "technology.repositories",
+            type: "array",
+            //htmlClass: "...",
+            items:{
+                key: "technology.repositories[]",
+                title: "Repository {{idx}}"
+            }
+        },
+    ]
 };
 
 let generateForm = ()=>{
     $('#idForm').jsonForm({
         schema: jschema.properties,
+
+        value: {
+
+        },
 
         form: [
             //"*",
@@ -165,6 +212,8 @@ let generateForm = ()=>{
             // ACCESS
             formAccess,
 
+            formTech,
+
 /*
                         ]
                     }
@@ -178,7 +227,7 @@ let generateForm = ()=>{
             },
             {
                 type: "submit",
-                title: "Generate Manifest"
+                title: "Generate Service Manifest"
             }
         ],
 

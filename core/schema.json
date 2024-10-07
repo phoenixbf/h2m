@@ -19,15 +19,13 @@
           "function": {
             "title": "Function/Task",
             "description": "The main function/task of the service",
-            "type": "string",
-            "enum": ["xx","yy"]
+            "type": "string"
           },
           "keywords": {
             "title": "Keywords",
             "type": "array",
             "items": {
-                "type":"string",
-                "enum": ["kw1","kw2"]
+                "type":"string"
             }
           },
           "category": {
@@ -153,6 +151,49 @@
             "title": "Presentation layer",
             "description": "The service offers a presentation layer to inspect data (e.g.: images, 3D models, etc.)",
             "type": "boolean"
+          }
+        }
+      },
+
+      "technology":{
+        "type":"object",
+        "title": "Technology",
+        "properties": {
+          "trl": {
+            "title": "Technology Readiness Level (TRL)",
+            "description": "...",
+            "type":"integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "srl": {
+            "title": "Societal Readiness Level (SRL)",
+            "description": "...",
+            "type":"integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "orl": {
+            "title": "Organizational Readiness Level (ORL)",
+            "description": "...",
+            "type":"integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+          "lrl": {
+            "title": "Legal Readiness Level (LRL)",
+            "description": "...",
+            "type":"integer",
+            "minimum": 1,
+            "maximum": 9
+          },
+
+          "repositories": {
+            "title": "Repositories",
+            "type": "array",
+            "items": {
+                "type":"string"
+            }
           }
         }
       }
