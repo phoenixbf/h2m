@@ -1,3 +1,15 @@
+body {
+/*
+    background-image: url("./bg.jpg");
+
+    background-position: top;
+    background-repeat: repeat-y;
+
+    background-size: auto;
+*/
+    overflow-y: auto;
+}
+
 .header {
     display: inline-block;
     font-size: x-large;
