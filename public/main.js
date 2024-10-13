@@ -27,12 +27,30 @@ let submit = (errors, values)=>{
     $('#res').html("<pre>"+strdata+"</pre>");
 
     downloadAsJSON(srvid+".h2iosc.service.json", strdata);
+/*
+    publishManifest(srvid, values);
+    window.open("/api/manifests/"+srvid, '_blank');
+*/
 };
 
 let downloadAsJSON = (filename, data)=>{
     dlink.href = URL.createObjectURL( new Blob( [ data ], { type: 'text/plain' } ) );
     dlink.download = filename;
     dlink.click();
+};
+
+let publishManifest = (manifestid, data)=>{
+    let O = {};
+    O.data = data;
+    O.mid  = manifestid;
+
+    fetch("/api/manifests", {
+        method: "POST",
+        body: JSON.stringify(O),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+      })
+      .then(response => response.json()) 
+      .then(json => console.log(json));
 };
 
 /*
@@ -222,13 +240,24 @@ let generateForm = ()=>{
 */
             //===============================
             {
-                type: "help",
-                helpvalue: "<strong>Click on <em>Generate Manifest</em></strong> when you're done"
-            },
-            {
-                type: "submit",
-                title: "Generate Service Manifest"
-            }
+                "type": "actions",
+                "items": [
+                {
+                    type: "help",
+                    helpvalue: "<strong>Click on <em>Generate Manifest</em></strong> when you're done"
+                },
+                {
+                    type: "submit",
+                    title: "Generate Service Manifest"
+                },
+/*
+                {
+                    type: "button",
+                    title: "Publish Service Manifest",
+                    onClick: publishManifest
+                }
+*/
+            ]}
         ],
 
         onSubmit: submit

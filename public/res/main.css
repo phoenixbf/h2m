@@ -76,6 +76,10 @@ legend img {
 
 .btn-primary {
     width: 100%;
+    height: 50px;
+    font-size: larger;
+}
+.btn-default {
     font-size: larger;
 }
 
