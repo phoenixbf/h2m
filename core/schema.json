@@ -72,6 +72,7 @@
           },
           "contact": {
             "title": "Contact Team",
+            "description": "Main contacts (single person or team) for this service",
             "type": "array",
             "items": {
                 "type":"string",
@@ -127,6 +128,7 @@
 
                     "application/octet-stream",
                     "application/json",
+                    "application/pdf",
                     "application/geo+json",
                     "application/gzip",
                     "application/jwt",
@@ -138,7 +140,9 @@
                     "model/mtl",
                     "model/gltf-binary",
                     "model/gltf+json",
-                    "model/x3d+xml"
+                    "model/x3d+xml",
+                    "model/vnd.collada+xml",
+                    "model/vnd.usda"
                   ]
                 },
                 "output": {
@@ -175,6 +179,7 @@
 
                     "application/octet-stream",
                     "application/json",
+                    "application/pdf",
                     "application/geo+json",
                     "application/gzip",
                     "application/jwt",
@@ -186,7 +191,9 @@
                     "model/mtl",
                     "model/gltf-binary",
                     "model/gltf+json",
-                    "model/x3d+xml"
+                    "model/x3d+xml",
+                    "model/vnd.collada+xml",
+                    "model/vnd.usda"
                   ]
                 },
     
