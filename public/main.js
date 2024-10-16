@@ -109,7 +109,7 @@ let formProvider = {
 
 let formFlows = {
     type: "fieldset",
-    title: "Flows",
+    title: "I/O Flows",
     expandable: true,
     items: [
         {

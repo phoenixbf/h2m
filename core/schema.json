@@ -87,31 +87,118 @@
         "properties": {
           "list":{
             "type":"array",
+            "title": "I/O Flows list",
+            "description": "This section describes prominent I/O flows (operations) offered by your service. Each input/output pair for a given flow can be described via media type (also known as a Multipurpose Internet Mail Extensions - or MIME type) indicating the nature and format of a document, file, or assortment of bytes. MIME types are defined and standardized in IETF's RFC 6838 - see https://www.iana.org/assignments/media-types/media-types.xhtml",
             "items": {
               "type":"object",
               "title":"Flow",
               "properties": {
-                "input-type": {
+                "input": {
                   "type": "string",
-                  "title":"Input file type",
-                  "enum": ["Image","Text","Video","Audio","3D Model"]
+                  "title":"Input type",
+                  "description": "Input MIME type",
+                  "enum": [
+                    "",
+
+                    "image/jpeg",
+                    "image/ktx",
+                    "image/png",
+                    "image/apng",
+                    "image/aces",
+                    "image/svg+xml",
+                    "image/tiff",
+                    "image/webp",
+                    "image/gif",
+                    "image/heic",
+                    "image/bmp",
+
+                    "text/plain",
+                    "text/csv",
+                    "text/rtf",
+                    "text/turtle",
+                    "text/xml",
+                    "text/html",
+                    "text/richtext",
+
+                    "video/mp4",
+                    "video/mpeg",
+                    "video/ogg",
+                    "video/raw",
+
+                    "application/octet-stream",
+                    "application/json",
+                    "application/geo+json",
+                    "application/gzip",
+                    "application/jwt",
+                    "application/rdf+xml",
+
+                    "model/e57",
+                    "model/stl",
+                    "model/obj",
+                    "model/mtl",
+                    "model/gltf-binary",
+                    "model/gltf+json",
+                    "model/x3d+xml"
+                  ]
                 },
-                "input-format": {
-                  "type": "string"
-                },
-                "output-type": {
+                "output": {
                   "type": "string",
-                  "title":"output file type",
-                  "enum": ["Image","Text","Video","Audio","3D Model"]
-                },
-                "output-format": {
-                  "type": "string"
+                  "title":"Output type",
+                  "description": "Output MIME type",
+                  "enum": [
+                    "",
+
+                    "image/jpeg",
+                    "image/ktx",
+                    "image/png",
+                    "image/apng",
+                    "image/aces",
+                    "image/svg+xml",
+                    "image/tiff",
+                    "image/webp",
+                    "image/gif",
+                    "image/heic",
+                    "image/bmp",
+
+                    "text/plain",
+                    "text/csv",
+                    "text/rtf",
+                    "text/turtle",
+                    "text/xml",
+                    "text/html",
+                    "text/richtext",
+
+                    "video/mp4",
+                    "video/mpeg",
+                    "video/ogg",
+                    "video/raw",
+
+                    "application/octet-stream",
+                    "application/json",
+                    "application/geo+json",
+                    "application/gzip",
+                    "application/jwt",
+                    "application/rdf+xml",
+
+                    "model/e57",
+                    "model/stl",
+                    "model/obj",
+                    "model/mtl",
+                    "model/gltf-binary",
+                    "model/gltf+json",
+                    "model/x3d+xml"
+                  ]
                 },
     
                 "description": {
                   "title": "Description",
                   "type": "string",
                   "description": "A brief description for this I/O flow"
+                },
+                "usercontrol":{
+                  "title": "Controlled by user",
+                  "description": "This I/O flow requires user control via graphical user interface (GUI)",
+                  "type": "boolean"
                 }
               }
             }
