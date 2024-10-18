@@ -284,6 +284,7 @@
 
           "repositories": {
             "title": "Repositories",
+            "description": "A list of one or more repositories (e.g.: github, gitlab, etc.) - if available - with reference code used to realize the service",
             "type": "array",
             "items": {
                 "type":"string"

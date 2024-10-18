@@ -94,7 +94,8 @@ let formProvider = {
     items: [
         {
             key: "provider.RI",
-            type: "radiobuttons"
+            type: "radiobuttons",
+            activeClass: "btn-success"
         },
         {
             key: "provider.contact",
@@ -115,9 +116,10 @@ let formFlows = {
         {
             key: "flows.list",
             type: "array",
-            items:{
+            items: {
                 key: "flows.list[]",
-                title: "Flow #{{idx}}"
+                title: "Flow #{{idx}}",
+                htmlClass: "subsection"
             }
         },
     ]
