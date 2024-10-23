@@ -44,10 +44,18 @@ app.post("/api/manifests", (req,res)=>{
 		return;
 	}
 
+	if (!mid.startsWith("dariah-") && !mid.startsWith("clarin-") && !mid.startsWith("erihs-") && !mid.startsWith("operas-")){
+		res.send(false);
+		return;
+	}
+
 	let jmpath = getManifestPath(mid);
 
 	fs.writeFile(jmpath, JSON.stringify(data /*, null, 4*/), (err) => {
-		if (err) console.log(err);
+		if (err){
+			console.log(err);
+			res.send(false);
+		}
 		else {
 			console.log("Manifest "+mid+" written successfully");
 			res.send(true);

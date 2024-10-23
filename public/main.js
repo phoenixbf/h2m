@@ -26,11 +26,14 @@ let submit = (errors, values)=>{
 
     $('#res').html("<pre>"+strdata+"</pre>");
 
-    downloadAsJSON(srvid+".h2iosc.service.json", strdata);
-/*
-    publishManifest(srvid, values);
-    window.open("/api/manifests/"+srvid, '_blank');
-*/
+    //downloadAsJSON(srvid+".h2iosc.service.json", strdata);
+
+    if (title.length < 2) return;
+    if (ri.length < 2) return;
+
+    publishManifest(srvid, values, ()=>{
+        window.open("/api/manifests/"+srvid, '_blank');
+    });
 };
 
 let downloadAsJSON = (filename, data)=>{
@@ -39,7 +42,7 @@ let downloadAsJSON = (filename, data)=>{
     dlink.click();
 };
 
-let publishManifest = (manifestid, data)=>{
+let publishManifest = (manifestid, data, onSuccess)=>{
     let O = {};
     O.data = data;
     O.mid  = manifestid;
@@ -48,9 +51,12 @@ let publishManifest = (manifestid, data)=>{
         method: "POST",
         body: JSON.stringify(O),
         headers: {"Content-type": "application/json; charset=UTF-8"}
-      })
-      .then(response => response.json()) 
-      .then(json => console.log(json));
+    })
+    .then(response => response.json()) 
+    .then(r => {
+        if (r) onSuccess();
+        else console.log("Manifest publication failed!");
+    });
 };
 
 /*
