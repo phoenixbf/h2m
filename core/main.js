@@ -3,6 +3,8 @@ const http        = require('http');
 const express     = require('express');
 const path        = require('path');
 
+const JSValidator = require('jsonschema').Validator;
+
 const PORT = 8095;
 const DIR_PUBLIC    = path.join(__dirname,"../public/");
 const DIR_MANIFESTS = path.join(DIR_PUBLIC,"manifests/");
@@ -10,6 +12,8 @@ const DIR_JSONFORM  = path.join(__dirname,"../node_modules/jsonform/");
 
 // JSON schema
 let jsonschema = JSON.parse(fs.readFileSync(path.join(__dirname,"schema.json"), 'utf8'));
+
+let JSV = new JSValidator();
 
 
 // Touch manifests folder
@@ -44,10 +48,21 @@ app.post("/api/manifests", (req,res)=>{
 		return;
 	}
 
-	if (!mid.startsWith("dariah-") && !mid.startsWith("clarin-") && !mid.startsWith("erihs-") && !mid.startsWith("operas-")){
+	// Server-side manifest validation
+	let r = JSV.validate(data, jsonschema);
+	if (!r.valid){
+		console.log("Invalid service manifest");
 		res.send(false);
 		return;
 	}
+
+	// Manifest ID validation
+	if (!mid.startsWith("dariah-") && !mid.startsWith("clarin-") && !mid.startsWith("erihs-") && !mid.startsWith("operas-")){
+		console.log("Invalid manifest ID");
+		res.send(false);
+		return;
+	}
+
 
 	let jmpath = getManifestPath(mid);
 
