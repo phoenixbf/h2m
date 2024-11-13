@@ -255,28 +255,28 @@
         "properties": {
           "trl": {
             "title": "Technology Readiness Level (TRL)",
-            "description": "...",
+            "description": "Technology Readiness Levels (TRL) are a type of measurement system used to assess the maturity level of a particular technology. Each service is evaluated against the parameters for each technology level and is then assigned a TRL rating based on the projects progress. Please refer to H2IOSC WP3 documentation.",
             "type":"integer",
             "minimum": 1,
             "maximum": 9
           },
           "srl": {
             "title": "Societal Readiness Level (SRL)",
-            "description": "...",
+            "description": "Societal Readiness Level (SRL) is a way of assessing the level of societal adaptation of a service to be integrated into society. The readiness of the society to adopt this specific service. Please refer to H2IOSC WP3 documentation.",
             "type":"integer",
             "minimum": 1,
             "maximum": 9
           },
           "orl": {
             "title": "Organizational Readiness Level (ORL)",
-            "description": "...",
+            "description": "Organizational Readiness Level (ORL) is mainly about the domestication of technology, in this case the organisational impact of a certain service. Please refer to H2IOSC WP3 documentation.",
             "type":"integer",
             "minimum": 1,
             "maximum": 9
           },
           "lrl": {
             "title": "Legal Readiness Level (LRL)",
-            "description": "...",
+            "description": "Legal Readiness Level (LRL) is related to legal and regulatory implications of innovations associated with this specific service. Please refer to H2IOSC WP3 documentation.",
             "type":"integer",
             "minimum": 1,
             "maximum": 9
