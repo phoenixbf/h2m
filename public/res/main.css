@@ -41,11 +41,18 @@ body {
 }
 
 fieldset {
-    background-color: rgba(0,0,0, 0.1);
+    background-color: rgba(0,0,0, 0.05);
     border-radius: 20px;
     padding: 10px;
 }
 
+.flowbox {
+    border: black 2px;
+}
+
+ul {
+    border-left: dotted #004371;
+}
 
 legend {
     width: 100%;
@@ -100,9 +107,18 @@ legend img {
 }
 
 /*
+.controls .checkbox {
+    display: inline-block;
+}
+*/
+
+/*
 .checkbox {
+
     height: 25px;
     padding: 0px;
+
+    display: inline-block;
 }
 */
 

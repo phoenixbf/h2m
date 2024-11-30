@@ -125,7 +125,7 @@ let formFlows = {
             items: {
                 key: "flows.list[]",
                 title: "Flow #{{idx}}",
-                htmlClass: "subsection"
+                //htmlClass: "flowbox"
             }
         },
     ]
