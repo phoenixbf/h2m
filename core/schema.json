@@ -153,7 +153,7 @@
                   "description": "Output MIME types. You can add one or more output types related to this flow. An empty list means there is no output for this operation.",
                   "items": {
                     "type":"string",
-                    "title":"Input type",
+                    "title":"Output type",
                     "enum": [
                       "image/jpeg",
                       "image/ktx",

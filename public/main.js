@@ -126,6 +126,12 @@ let formFlows = {
                 key: "flows.list[]",
                 title: "Flow #{{idx}}",
                 //htmlClass: "flowbox"
+/*
+                items: {
+                    key: "flows.list[].input[]",
+                    type: "checkboxes"
+                }
+*/
             }
         },
     ]

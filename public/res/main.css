@@ -54,6 +54,12 @@ ul {
     border-left: dotted #004371;
 }
 
+/*
+label {
+    border-right: solid #004371; 
+}
+*/
+
 legend {
     width: 100%;
     background-color: #004371;
