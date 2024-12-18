@@ -210,6 +210,11 @@
                   "title": "Controlled by user",
                   "description": "This I/O flow requires user control via graphical user interface (GUI)",
                   "type": "boolean"
+                },
+                "stream":{
+                  "title": "Stream",
+                  "description": "This I/O flow consists of streaming data that is processed on-the-fly. When unchecked (default) data is consumed or produced by accessing federated H2IOSC storages or data clouds",
+                  "type": "boolean"
                 }
               }
             }
