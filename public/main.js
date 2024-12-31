@@ -212,13 +212,14 @@ let formTech = {
     ]
 };
 
-let generateForm = ()=>{
+let generateForm = (dvalues)=>{
+    let val = {};
+    if (dvalues) val = dvalues;
+
     $('#idForm').jsonForm({
         schema: jschema.properties,
 
-        value: {
-
-        },
+        value: val,
 
         form: [
             //"*",
@@ -285,11 +286,24 @@ window.addEventListener("load",()=>{
     dlink.style.display = 'none';
     document.body.appendChild( dlink ); // Firefox workaround, see #6594
 
+    let params = new URLSearchParams( window.location.search );
+
     $.get("api/schema", (data)=>{
         jschema = data;
         console.log(jschema);
 
-        generateForm();
+        if (params.get("m")){
+            let M = String(params.get("m"));
+
+            fetch("/api/manifests/"+M, {
+                method: "GET"
+            })
+            .then(response => response.json()) 
+            .then(r => {
+                generateForm(r);
+            });
+        }
+        else generateForm();
     });
 
 
