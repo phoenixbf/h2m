@@ -83,7 +83,20 @@ let formGeneral = {
 
         {
             key: "general.domain",
-            type: "text"
+            type: "array",
+            items:{
+                key: "general.domain[]",
+                title: "Research domain {{idx}}"
+            }
+        },
+
+        {
+            key: "general.keywords",
+            type: "array",
+            items:{
+                key: "general.keywords[]",
+                title: "Keyword {{idx}}"
+            }
         },
 
         {
@@ -103,6 +116,12 @@ let formProvider = {
             type: "radiobuttons",
             activeClass: "btn-success"
         },
+/*
+        {
+            key: "provider.OU",
+            type: "radios"
+        },
+*/
         {
             key: "provider.contact",
             type: "array",

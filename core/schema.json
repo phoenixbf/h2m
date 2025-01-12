@@ -19,7 +19,10 @@
           "function": {
             "title": "Function/Task",
             "description": "The main function/task of the service",
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type":"string"
+            }
           },
           "keywords": {
             "title": "Keywords",
@@ -50,7 +53,10 @@
           },
           "domain": {
             "title": "Research domain",
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type":"string"
+            }
           },
           "website": {
             "title": "Website",
@@ -69,6 +75,30 @@
             "title": "Research Infrastructure",
             "required": true,
             "enum": ["CLARIN","DARIAH","E-RIHS","OPERAS"]
+          },
+          "OU": {
+            "type": "string",
+            "title": "Operating Unit",
+            "enum": [
+              "IAC NA",
+              "ICAR NA",
+              "ILC PI",
+              "ILIESI RM",
+              "IMATI GE",
+              "INO FI",
+              "ISPC RM",
+              "ISPC NA",
+              "ISPC LE",
+              "ISPC CT",
+              "ISPC MI",
+              "ISPC FI",
+              "ISPF NA",
+              "ISTI PI",
+              "NANOTEC LE",
+              "OVI FI",
+              "OVI PI",
+              "SCITEC PG"
+            ]
           },
           "contact": {
             "title": "Contact Team",
