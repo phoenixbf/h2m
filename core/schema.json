@@ -239,7 +239,7 @@
               "title": "access point"
             }
           },
-          "oas":{
+          "oad":{
             "title": "OpenAPI specification",
             "description": "URL to OpenAPI definition (JSON/YAML) describing REST API for this service. OAS URL must be publicly accessible",
             "type": "string"

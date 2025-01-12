@@ -152,7 +152,7 @@ let formAccess = {
             }
         },
         {
-            key: "access.oas",
+            key: "access.oad",
             type: "text"
         },
         {
