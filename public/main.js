@@ -114,7 +114,25 @@ let formProvider = {
         {
             key: "provider.RI",
             type: "radiobuttons",
-            activeClass: "btn-success"
+            id: "serviceRI",
+            activeClass: "btn-success",
+            onChange: (evt)=>{
+                let value = $(evt.target).val();
+
+                $("#imgRI").remove();
+                $("#serviceRI").append("<div id='imgRI' style='display:block'><img src='res/"+value+".png'></div>");
+            }
+
+/*
+            type: "imageselect",
+            imageWidth: 300,
+            imageHeight: 100,
+            imageButtonClass: "btn-inverse",
+            imagePrefix: "res/",
+            imageSuffix: ".png",
+            //imageSelectorColumns: 4,
+            imageSelectorTitle: "RI"
+*/
         },
 /*
         {
@@ -251,7 +269,14 @@ let generateForm = (dvalues)=>{
                         type:"tabs",
                         id:"navtabs",
                         items: [
+                            formGeneral,
+                            formProvider
+                        ]
+                    }
+                ]
+            },
 */
+
             // GENERAL
             formGeneral,
 
@@ -266,32 +291,27 @@ let generateForm = (dvalues)=>{
 
             formTech,
 
-/*
-                        ]
-                    }
-                ]
-            },
-*/
             //===============================
             {
-                "type": "actions",
-                "items": [
-                {
-                    type: "help",
-                    helpvalue: "<strong>Click on <em>Generate Manifest</em></strong> when you're done"
-                },
-                {
-                    type: "submit",
-                    title: "Generate Service Manifest"
-                },
-/*
-                {
-                    type: "button",
-                    title: "Publish Service Manifest",
-                    onClick: publishManifest
-                }
-*/
-            ]}
+                type: "actions",
+                items: [
+                    {
+                        type: "help",
+                        helpvalue: "<strong>Click on <em>Generate Manifest</em></strong> when you're done"
+                    },
+                    {
+                        type: "submit",
+                        title: "Generate Service Manifest"
+                    },
+    /*
+                    {
+                        type: "button",
+                        title: "Publish Service Manifest",
+                        onClick: publishManifest
+                    }
+    */
+                ]
+            }
         ],
 
         onSubmit: submit
