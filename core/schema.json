@@ -241,7 +241,7 @@
           },
           "oad":{
             "title": "OpenAPI specification",
-            "description": "URL to OpenAPI definition (JSON/YAML) describing REST API for this service. OAS URL must be publicly accessible",
+            "description": "URL to OpenAPI definition or document (JSON/YAML) describing REST API for this service. OAD URL must be publicly accessible",
             "type": "string"
           },
           "horizontal":{
