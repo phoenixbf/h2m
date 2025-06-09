@@ -93,10 +93,13 @@ let formGeneral = {
         {
             key: "general.keywords",
             type: "array",
+            type: "checkboxes",
+/*
             items:{
                 key: "general.keywords[]",
                 title: "Keyword {{idx}}"
             }
+*/
         },
 
         {
